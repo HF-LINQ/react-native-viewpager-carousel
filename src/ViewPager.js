@@ -101,7 +101,7 @@ export default class ViewPager extends PureComponent {
     }, 0)
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     const newDataSource = [...this._prepareData(nextProps.data || [])]
     if (newDataSource.length !== this.state.dataSource.length || nextProps.pageWidth !== this.props.pageWidth){
       this.contentContainerStyle = {
